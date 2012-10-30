@@ -15,12 +15,11 @@
 	$filename = 'entries.txt';
 	
 	//get our date from PHP
-	//$date = date('M jS, Y');
-	$date = new DateTime();
-	echo $date->getTimestamp();
+	$date = date('M jS, Y');
+	//$date = new DateTime();
 	
 	//the formatted content we will write into our file
-	$entry = "\n".$date." ".$personsName."\n".$personsEmail."\n".$personsSite."\n".$personsTwitter."\n".$theMessage; 
+	$entry = "\n".$date." ".$personsName."\n".$personsEmail."\n".$personsSite."\n".$personsTwitter."\n".$theMessage."\n"; 
 	
 	//creating a full path same as $targetPath = $targetPath.$filename;
 	$targetPath .= $filename;

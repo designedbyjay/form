@@ -19,10 +19,8 @@
 	//echo 'Post size: '.sizeof($_POST).'<br>';
 	//echo 'Get size: '.sizeof($_GET).'<br>';
 
-	if( sizeof($_POST)> 0){
-		//echo 'post data';
-		$post = true; //create a variable named $post - different from $_POST
-	}else if( sizeof($_GET)>0 && sizeof($_POST)==0 ){
+
+	if( sizeof($_GET)>0 && sizeof($_POST)==0 ){
 	
 		//echo 'Just Get';
 		
@@ -32,7 +30,7 @@
 		//var_dump($_POST); echo "<br>"; var_dump($_FILES);
 		
 		include('includes/fileCreator.php');
-	
+		$post = true;
 	
 	}else if( sizeof($_GET)>0 && sizeof($_POST)>0 ){
 	
