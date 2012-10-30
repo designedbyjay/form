@@ -22,9 +22,23 @@
 	if( sizeof($_POST)> 0){
 		//echo 'post data';
 		$post = true; //create a variable named $post - different from $_POST
-	}elseif( sizeof($_GET)>0){
-		//echo 'get data';
-		$get = true;
+	}else if( sizeof($_GET)>0 && sizeof($_POST)==0 ){
+	
+		//echo 'Just Get';
+		
+	}else if( sizeof($_GET)==0 && sizeof($_POST)>0 ){
+	
+		//echo 'Just Post';
+		//var_dump($_POST); echo "<br>"; var_dump($_FILES);
+		
+		include('includes/fileCreator.php');
+	
+	
+	}else if( sizeof($_GET)>0 && sizeof($_POST)>0 ){
+	
+		//echo 'Both';
+
+
 	}
 		
 
